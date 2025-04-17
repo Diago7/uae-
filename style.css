@@ -1,0 +1,260 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; /* ඔබට කැමති font එකක් යොදන්න */
+    line-height: 1.6;
+    background-color: #000000; /* පසුබිම් වර්ණය */
+    color: #f1f1f1; /* කළු පසුබිමේ පේන්න ලා පාටක් */
+    font-size: 16px; /* Base font size */
+}
+
+header {
+    background-color: #e83e8c; /* Header Background Color (Pinkish) */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 1.8rem; /* Adjust header font size */
+}
+
+header h1 i {
+    margin-right: 10px; /* අයිකන් එකට ඉඩක් */
+}
+
+main {
+    max-width: 1200px; /* වෙබ් අඩවියේ උපරිම පළල */
+    margin: 20px auto; /* මැදට ගන්න */
+    padding: 0 20px; /* Default padding */
+    /* දෙපැත්තෙන් ඉඩ තියන්න */
+}
+
+.intro {
+    background-color: #1a1a1a; /* Dark background for intro section */
+    padding: 25px; /* Increased padding */
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(255,255,255,0.05); /* Subtle shadow on dark */
+    color: #e0e0e0; /* Lighter text color for intro */
+}
+
+.intro h2 {
+    color: #e83e8c; /* Heading Color */
+    margin-bottom: 20px; /* Increased margin */
+    font-size: 1.6rem; /* Adjust intro heading size */
+}
+
+.intro ol {
+    list-style-position: inside; /* ලැයිස්තුවේ ඉලක්කම් ඇතුලට ගන්න */
+    padding-left: 10px;
+}
+
+.intro li {
+    margin-bottom: 10px; /* Increased spacing */
+    color: #cccccc; /* Lighter list item color */
+}
+
+.intro li i {
+    color: #e83e8c; /* අයිකන් එකට පාටක් */
+    margin-right: 8px; /* Icon spacing */
+    width: 1em; /* Ensure icons take up consistent space */
+    text-align: center;
+}
+
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 35px; /* Increased margin */
+    color: #f1f1f1; /* Heading color changed for dark background */
+    font-size: 1.7rem; /* Adjust products heading size */
+}
+
+.product-grid {
+    display: grid;
+    /* Products ටික Responsive විදිහට පෙන්නන්න */
+    /* Adjust minmax for potentially 4 columns on wider screens */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px; /* Increased gap */
+}
+
+.product-card {
+    background-color: #1f1f1f; /* Slightly lighter dark for card */
+    border: 1px solid #444; /* Adjusted border color */
+    border-radius: 10px; /* Slightly more rounded corners */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.4); /* Slightly stronger shadow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* පොඩි animation එකක් */
+    display: flex; /* Use flexbox for better content alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Push button to bottom */
+}
+
+.product-card:hover {
+    transform: translateY(-6px); /* Slightly more lift */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5); /* Stronger hover shadow */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 220px; /* Increased image height */
+    object-fit: cover; /* පින්තූරේ aspect ratio එක තියාගෙන කොටුවට හිරකරන්න */
+    border-radius: 6px; /* Match card rounding */
+    margin-bottom: 15px;
+    border: 1px solid #555; /* Subtle border around image */
+}
+
+.product-card h3 {
+    margin-bottom: 12px; /* Increased margin */
+    font-size: 1.25rem; /* Slightly larger title */
+    color: #e8b0c9; /* Lighter heading color for card */
+    flex-grow: 0; /* Prevent title from growing */
+    min-height: 2.5em; /* Ensure space for two lines */
+    line-height: 1.25;
+}
+
+.product-card p {
+    font-size: 0.95rem; /* Slightly larger description text */
+    color: #cccccc; /* Lighter text color for card description */
+    margin-bottom: 20px; /* Increased margin */
+    min-height: 50px; /* Description එකට ඉඩක් තියන්න */
+    flex-grow: 1; /* Allow description to grow and push button down */
+    line-height: 1.5;
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: #e83e8c; /* Changed to pink to match header */
+    color: #fff;
+    padding: 12px 25px; /* Increased padding */
+    border: none;
+    border-radius: 25px; /* Pill shape */
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    flex-grow: 0; /* Prevent button from growing */
+    align-self: center; /* Center button horizontally */
+    font-size: 1rem; /* Explicit font size */
+}
+
+.buy-button i {
+    margin-right: 8px; /* අයිකන් එකට ඉඩක් */
+}
+
+.buy-button:hover {
+    background-color: #d0367c; /* Darker pink on hover */
+    transform: scale(1.03); /* Slight scale effect */
+}
+
+.buy-button:active {
+    transform: scale(0.98); /* Press effect */
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 50px; /* Increased margin */
+    padding: 25px 0; /* Increased padding */
+    background-color: #1a1a1a; /* Darker Footer background */
+    color: #aaaaaa; /* Lighter Footer text color */
+    border-top: 1px solid #333; /* Adjusted border color */
+    font-size: 0.9rem;
+}
+
+
+/* --- Media Queries for Responsive Adjustments --- */
+
+/* For Tablets (e.g., >= 768px) */
+@media (min-width: 768px) {
+    body {
+        font-size: 17px; /* Slightly larger base font */
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .intro h2, .products h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* For smaller Mobile screens (e.g., <= 480px) */
+@media (max-width: 480px) {
+    body {
+       font-size: 15px; /* පොඩි screen වල font size පොඩ්ඩක් අඩු කළා */
+    }
+
+    main {
+        padding: 0 15px; /* දෙපැත්තෙ padding එක adjust කලා */
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .intro {
+        padding: 20px;
+    }
+
+    .intro h2, .products h2 {
+        font-size: 1.4rem; /* පොඩි screen එකේ heading ටිකක් පොඩි කලා */
+        margin-bottom: 25px;
+    }
+
+    .product-grid {
+        gap: 20px; /* Reduce gap slightly */
+         /* Ensure single column layout works well */
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .product-card {
+        padding: 15px; /* Card padding පොඩ්ඩක් අඩු කලා */
+    }
+
+     .product-card h3 {
+        font-size: 1.15rem; /* Card heading පොඩ්ඩක් පොඩි කලා */
+        min-height: 2.4em;
+    }
+
+    .product-card img {
+        height: 180px; /* Adjust image height for smaller cards */
+    }
+
+    .buy-button {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    footer {
+        padding: 20px 0;
+        margin-top: 30px;
+    }
+}
+
+/* For very small screens (e.g., less than 360px) */
+@media (max-width: 360px) {
+     main {
+        padding: 0 10px;
+    }
+    .product-card h3 {
+        font-size: 1.1rem;
+    }
+     .product-card p {
+        font-size: 0.9rem;
+    }
+     .buy-button {
+        padding: 9px 18px;
+        font-size: 0.9rem;
+    }
+}
+
